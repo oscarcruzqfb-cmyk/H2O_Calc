@@ -15,18 +15,76 @@ NAVY = "#0B2545"
 TEAL = "#00A8B5"
 
 st.markdown(
+    
     f"""
     <style>
+
+        /* Fondo general */
         .stApp {{
             background: linear-gradient(180deg, #ffffff 0%, #f7fcfd 100%);
-        }}
-        h1, h2, h3 {{
             color: {NAVY};
         }}
+dx
+        /* Títulos */
+        h1, h2, h3 {{
+            color: {NAVY} !important;
+        }}
+
+        /* Texto normal */
+        p, span, label, div {{
+            color: {NAVY};
+        }}
+
+        /* Subtítulo */
         .h2o-subtitle {{
-            color: {TEAL};
+            color: {TEAL} !important;
             font-weight: 600;
         }}
+
+        /* Labels de inputs */
+        [data-testid="stWidgetLabel"] p {{
+            color: {NAVY} !important;
+            font-weight: 600;
+        }}
+
+        /* Radio buttons */
+        [data-testid="stRadio"] label {{
+            color: {NAVY} !important;
+        }}
+
+        /* Selectbox */
+        [data-baseweb="select"] * {{
+            color: {NAVY} !important;
+        }}
+
+        /* Number inputs */
+        input {{
+            color: {NAVY} !important;
+            background-color: white !important;
+        }}
+
+        /* Texto dentro de botones */
+        button {{
+            color: {NAVY};
+        }}
+
+        /* Botón principal */
+        button[kind="primary"] {{
+            background-color: {TEAL} !important;
+            color: white !important;
+            border: none;
+        }}
+
+        /* Texto informativo */
+        .stCaption, [data-testid="stCaptionContainer"] {{
+            color: #52677D !important;
+        }}
+
+        /* Alertas */
+        [data-testid="stAlert"] p {{
+            color: #16324F !important;
+        }}
+
     </style>
     """,
     unsafe_allow_html=True,
